@@ -27,6 +27,7 @@ export default function Home() {
           alt="JOPE GAME Logo"
           width={220}
           height={220}
+          priority
           className="rounded-full border-4 border-zinc-800 shadow-[0_0_30px_rgba(250,204,21,0.2)] relative z-10"
         />
       </div>
