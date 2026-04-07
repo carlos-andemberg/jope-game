@@ -42,7 +42,7 @@ export default function VitrinePerifericos() {
       
       {/* Cabeçalho */}
       <div className="max-w-6xl mx-auto flex items-center justify-between mb-8 mt-4">
-        <Link href="/vendas/gamers" className="text-zinc-500 hover:text-yellow-400 transition-colors font-bold flex items-center gap-2 uppercase text-sm tracking-widest">
+        <Link href="/gamers" className="text-zinc-500 hover:text-yellow-400 transition-colors font-bold flex items-center gap-2 uppercase text-sm tracking-widest">
           <ArrowLeft className="w-4 h-4" /> Voltar
         </Link>
         <h1 className="text-2xl md:text-3xl font-black text-center text-yellow-400 tracking-wider">

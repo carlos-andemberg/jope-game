@@ -35,7 +35,7 @@ export default function VendasGamers() {
       <div className="w-full max-w-4xl flex flex-col md:flex-row gap-8 justify-center px-4">
         
         <Link 
-          href="/vendas/gamers/orcamento" 
+          href="/gamers/orcamento" 
           className="relative flex-1 bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 rounded-3xl p-8 flex flex-col items-center justify-center overflow-hidden group hover:border-yellow-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(250,204,21,0.3)]"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -52,7 +52,7 @@ export default function VendasGamers() {
         </Link>
 
         <Link 
-          href="/vendas/gamers/perifericos" 
+          href="/gamers/perifericos" 
           className="relative flex-1 bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 rounded-3xl p-8 flex flex-col items-center justify-center overflow-hidden group hover:border-yellow-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(250,204,21,0.3)]"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

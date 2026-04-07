@@ -39,7 +39,7 @@ export default function Home() {
       {/* Botões de Navegação Modernos com Ícones Lucide */}
       <div className="flex flex-col gap-5 w-full max-w-md z-10">
         <Link
-          href="/vendas/eletronicos"
+          href="/eletronicos"
           className="group relative flex items-center justify-between bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-yellow-400 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(250,204,21,0.3)]"
         >
           <div className="flex items-center gap-4">
@@ -50,7 +50,7 @@ export default function Home() {
         </Link>
 
         <Link
-          href="/vendas/gamers"
+          href="/gamers"
           className="group relative flex items-center justify-between bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-yellow-400 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(250,204,21,0.3)]"
         >
           <div className="flex items-center gap-4">
