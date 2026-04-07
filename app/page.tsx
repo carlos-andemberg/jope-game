@@ -1,65 +1,105 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Smartphone, Gamepad2, Settings, Wrench, Instagram , Phone } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className="min-h-screen bg-zinc-950 flex flex-col items-center p-6 font-sans overflow-x-hidden">
+      
+      {/* Cabeçalho / Logo com Efeito Neon */}
+      <div className="flex flex-col items-center mt-12 mb-12 relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-yellow-400 rounded-full blur-[80px] opacity-20"></div>
+        <Image 
+          src="/Logo.jpeg" 
+          alt="JOPE GAME Logo" 
+          width={220} 
+          height={220} 
+          className="rounded-full border-4 border-zinc-800 shadow-[0_0_30px_rgba(250,204,21,0.2)] relative z-10"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
+      </div>
+
+      {/* Botões de Navegação Modernos com Ícones Lucide */}
+      <div className="flex flex-col gap-5 w-full max-w-md z-10">
+        <Link 
+          href="/vendas/eletronicos" 
+          className="group relative flex items-center justify-between bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-yellow-400 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(250,204,21,0.3)]"
+        >
+          <div className="flex items-center gap-4">
+            <Smartphone className="w-8 h-8 text-zinc-500 group-hover:text-yellow-400 transition-colors duration-300" />
+            <span className="text-white font-bold tracking-wide group-hover:text-yellow-400 transition-colors">VENDAS ELETRÔNICAS</span>
+          </div>
+          <span className="text-zinc-600 group-hover:text-yellow-400 transition-colors">&rarr;</span>
+        </Link>
+        
+        <Link 
+          href="/vendas/gamers" 
+          className="group relative flex items-center justify-between bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-yellow-400 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(250,204,21,0.3)]"
+        >
+          <div className="flex items-center gap-4">
+            <Gamepad2 className="w-8 h-8 text-zinc-500 group-hover:text-yellow-400 transition-colors duration-300" />
+            <span className="text-white font-bold tracking-wide group-hover:text-yellow-400 transition-colors">VENDAS GAMERS</span>
+          </div>
+          <span className="text-zinc-600 group-hover:text-yellow-400 transition-colors">&rarr;</span>
+        </Link>
+        
+        <Link 
+          href="/servicos" 
+          className="group relative flex items-center justify-between bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-yellow-400 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(250,204,21,0.3)]"
+        >
+          <div className="flex items-center gap-4">
+            <Settings className="w-8 h-8 text-zinc-500 group-hover:text-yellow-400 transition-colors duration-300" />
+            <span className="text-white font-bold tracking-wide group-hover:text-yellow-400 transition-colors">SERVIÇOS JOPE</span>
+          </div>
+          <span className="text-zinc-600 group-hover:text-yellow-400 transition-colors">&rarr;</span>
+        </Link>
+
+        <Link 
+          href="/manutencao" 
+          className="group relative flex items-center justify-between bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-yellow-400 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(250,204,21,0.3)]"
+        >
+          <div className="flex items-center gap-4">
+            <Wrench className="w-8 h-8 text-zinc-500 group-hover:text-yellow-400 transition-colors duration-300" />
+            <span className="text-white font-bold tracking-wide group-hover:text-yellow-400 transition-colors">MANUTENÇÃO EM PC</span>
+          </div>
+          <span className="text-zinc-600 group-hover:text-yellow-400 transition-colors">&rarr;</span>
+        </Link>
+      </div>
+
+      {/* Rodapé com Contatos */}
+      <footer className="mt-auto pt-16 pb-8 text-center flex flex-col items-center gap-3 w-full">
+        <h2 className="text-xl font-black text-yellow-400 tracking-widest mb-2">JOPE GAMES</h2>
+        
+        <div className="flex flex-wrap justify-center gap-4">
+          
+          {/* Link do Instagram Exato */}
+          <a 
+            href="https://www.instagram.com/jope5554/" 
+            target="_blank" 
             rel="noopener noreferrer"
+            className="group flex items-center gap-2 bg-zinc-900/80 hover:bg-zinc-800 px-5 py-2.5 rounded-full border border-zinc-800 hover:border-yellow-400 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] cursor-pointer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            <Instagram className="w-4 h-4 text-zinc-400 group-hover:text-yellow-400 group-hover:scale-110 transition-all duration-300" />
+            <span className="font-mono text-sm text-zinc-300 group-hover:text-white transition-colors font-medium tracking-wide">
+              JOPE 5554
+            </span>
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
+
+          {/* Link do WhatsApp com mensagem pronta */}
+          <a 
+            href="https://wa.me/5582999331536?text=Ol%C3%A1%21%20Vim%20da%20loja%20online%2C%20pode%20me%20ajudar%3F" 
+            target="_blank" 
             rel="noopener noreferrer"
+            className="group flex items-center gap-2 bg-zinc-900/80 hover:bg-zinc-800 px-5 py-2.5 rounded-full border border-zinc-800 hover:border-yellow-400 transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(250,204,21,0.15)] cursor-pointer"
           >
-            Documentation
+            <Phone className="w-4 h-4 text-zinc-400 group-hover:text-yellow-400 group-hover:scale-110 transition-all duration-300" />
+            <span className="font-mono text-sm text-zinc-300 group-hover:text-white transition-colors font-medium tracking-wide">
+              82 99933-1536
+            </span>
           </a>
+
         </div>
-      </main>
-    </div>
+      </footer>
+
+    </main>
   );
 }
