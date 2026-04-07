@@ -86,7 +86,7 @@ export default function Home() {
       {/* Rodapé com Contatos */}
       {/* Rodapé com Contatos e Créditos */}
       <footer className="mt-auto pt-16 pb-8 text-center flex flex-col items-center gap-3 w-full">
-        <h2 className="text-xl font-black text-yellow-400 tracking-widest mb-2">JOPE GAMES</h2>
+        <h2 className="text-xl font-black text-yellow-400 tracking-widest mb-2">Contato</h2>
 
         <div className="flex flex-wrap justify-center gap-4">
 
