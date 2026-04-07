@@ -80,6 +80,7 @@ export default function Home() {
       </div>
 
       {/* Rodapé com Contatos */}
+      {/* Rodapé com Contatos e Créditos */}
       <footer className="mt-auto pt-16 pb-8 text-center flex flex-col items-center gap-3 w-full">
         <h2 className="text-xl font-black text-yellow-400 tracking-widest mb-2">JOPE GAMES</h2>
 
@@ -112,6 +113,23 @@ export default function Home() {
           </a>
 
         </div>
+
+        {/* Linha divisória sutil */}
+        <div className="w-full max-w-xs h-px bg-zinc-800/60 mt-8 mb-4"></div>
+
+        {/* Créditos do Desenvolvedor Carlos Andemberg */}
+        <a
+          href="https://www.carlosandemberg.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex flex-col items-center gap-1 text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] text-zinc-600 hover:text-yellow-400 transition-colors"
+          aria-label="Portfólio do Desenvolvedor Carlos Andemberg"
+        >
+          <span>Desenvolvido por</span>
+          <span className="text-zinc-400 group-hover:text-white transition-colors">
+            Carlos Andemberg
+          </span>
+        </a>
       </footer>
 
     </main>
