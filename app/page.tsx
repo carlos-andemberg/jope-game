@@ -21,14 +21,18 @@ export default function Home() {
 
       {/* Cabeçalho / Logo com Efeito Neon */}
       <div className="flex flex-col items-center mt-12 mb-12 relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-yellow-400 rounded-full blur-[80px] opacity-20"></div>
+        {/* Efeito Neon otimizado: Menor no mobile (blur-2xl), gigante no PC (md:blur-[80px]) e forçando GPU */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-56 md:h-56 bg-yellow-400 rounded-full blur-2xl md:blur-[80px] opacity-20 transform-gpu" aria-hidden="true"></div>
+
         <Image
           src="/Logo.jpeg"
           alt="JOPE GAME Logo"
           width={220}
           height={220}
           priority
-          className="rounded-full border-4 border-zinc-800 shadow-[0_0_30px_rgba(250,204,21,0.2)] relative z-10"
+          unoptimized
+          // Sombra padrão no mobile (shadow-lg), gigante no PC, e forçando GPU
+          className="rounded-full border-4 border-zinc-800 shadow-lg md:shadow-[0_0_30px_rgba(250,204,21,0.2)] relative z-10 transform-gpu"
         />
       </div>
 
