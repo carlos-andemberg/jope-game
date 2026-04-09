@@ -30,6 +30,7 @@ export default function Home() {
           width={220}
           height={220}
           priority
+          fetchPriority="high"
           unoptimized
           // Sombra padrão no mobile (shadow-lg), gigante no PC, e forçando GPU
           className="rounded-full border-4 border-zinc-800 shadow-lg md:shadow-[0_0_30px_rgba(250,204,21,0.2)] relative z-10 transform-gpu"

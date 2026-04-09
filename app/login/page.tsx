@@ -34,16 +34,19 @@ export default function Login() {
   return (
     <main className="min-h-screen bg-zinc-950 flex items-center justify-center p-6 font-sans">
       <div className="w-full max-w-md">
-        
+
         {/* Logo e Título */}
         <div className="flex flex-col items-center mb-10">
           <div className="relative mb-6">
             <div className="absolute inset-0 bg-yellow-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-            <Image 
-              src="/Logo.jpeg" 
-              alt="JOPE GAME" 
-              width={120} 
-              height={120} 
+            <Image
+              src="/Logo.jpeg"
+              alt="JOPE GAME"
+              width={120}
+              height={120}
+              priority
+              fetchPriority="high"
+              unoptimized
               className="rounded-full border-4 border-zinc-800 relative z-10"
             />
           </div>
@@ -57,14 +60,14 @@ export default function Login() {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-30"></div>
 
           <form onSubmit={handleLogin} className="flex flex-col gap-6">
-            
+
             {/* Campo E-mail */}
             <div className="flex flex-col gap-2">
               <label className="text-zinc-400 text-xs font-black uppercase tracking-widest ml-1">E-mail</label>
               <div className="relative">
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-600" />
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="seu@email.com"
@@ -79,7 +82,7 @@ export default function Login() {
               <label className="text-zinc-400 text-xs font-black uppercase tracking-widest ml-1">Senha</label>
               <div className="relative">
                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-600" />
-                <input 
+                <input
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -87,7 +90,7 @@ export default function Login() {
                   className="w-full bg-zinc-950 border border-zinc-800 rounded-2xl py-4 pl-12 pr-12 text-white focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all"
                   required
                 />
-                <button 
+                <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-600 hover:text-yellow-400 transition-colors"
@@ -105,8 +108,8 @@ export default function Login() {
             )}
 
             {/* Botão de Entrar */}
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={loading}
               className="w-full bg-yellow-400 hover:bg-yellow-300 disabled:bg-zinc-800 disabled:text-zinc-600 text-zinc-950 font-black py-4 rounded-2xl uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_10px_20px_-10px_rgba(250,204,21,0.4)] active:scale-95"
             >
