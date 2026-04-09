@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Smartphone, Gamepad2, Settings, Wrench, Instagram, Phone } from "lucide-react";
-import { Lock } from "lucide-react"; // Adicione o Lock (ou Shield) aqui
+import { Lock } from "lucide-react"; 
 
 export default function Home() {
   return (
